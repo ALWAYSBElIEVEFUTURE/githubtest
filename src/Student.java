@@ -4,15 +4,17 @@ public class Student {
     private String name;
     private String email;
     private Integer age;
+    private String address;
 
     public Student() {
     }
 
-    public Student(Integer id, String name, String email, Integer age) {
+    public Student(Integer id, String name, String email, Integer age,String address) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.age = age;
+        this.address=address;
     }
 
     public Integer getId() {
@@ -47,13 +49,23 @@ public class Student {
         this.age = age;
     }
 
-    @Override
-    public String toString() {
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+
+    @java.lang.Override
+    public java.lang.String toString() {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", age=" + age +
+                ", address='" + address + '\'' +
                 '}';
     }
 }
